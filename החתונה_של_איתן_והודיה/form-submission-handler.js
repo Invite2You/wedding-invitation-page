@@ -191,8 +191,9 @@ submitButton.addEventListener("click", async function (event) {
   // Extract the table name from the URL
   const tableName = extractEventNameFromURL();
   console.log(tableName);
+  console.log(`string text ${tableName} string text`);
   const { error } = await supabase
-    .from(tableName)
+    .from('החתונה_של_איתן_והודיה')
     .insert([submition], { returning: "minimal" });
   if (error) {
     console.log("There was an error please try again");
