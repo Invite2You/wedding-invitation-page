@@ -1,0 +1,463 @@
+Reset some default browser styles body,
+h1,
+p,
+form,
+input,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Set the background image for sections */
+.header-image {
+  background-image: url("img/1.jpeg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.image-text {
+  background-image: url("img/2.png");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.image-form {
+  background-image: url("img/3.png");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+/* Style the container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Style the form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .header-image {
+    height: 50vh;
+  }
+}
+
+.right-align::placeholder {
+  text-align: right;
+}
+
+/* Hide the invitation-amount and the plus-minus-input by default */
+.invitation-amount {
+  display: none;
+}
+
+/* Cool Button Tests */
+
+.button-39 {
+  background-color: #FFFFFF;
+  border: 1px solid rgb(209,213,219);
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1rem;
+  padding: 14px 30px 14px 30px;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 10px 5px 25px auto;
+
+}
+
+.button-39:hover {
+  background-color: rgb(249,250,251);
+}
+
+.button-39:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-39:focus-visible {
+  box-shadow: none;
+}
+
+.button-39-first:active {
+  background-color: #9BA4B5;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.button-39-first:focus {
+  background-color: #9BA4B5;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.inline-buttons {
+margin-block-start: 5px;
+margin-block-end: 25px;
+}
+
+.mabye-lb {
+width: 84px;
+}
+
+.no-lb {
+width: 100px;
+}
+
+/* Inputs */
+
+.input {
+
+  padding: 12px 35px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 7px 0 rgb(0, 0, 0, 0.2);
+  outline: none;
+  color: dimgray;
+  margin: auto auto 4px auto
+}
+
+.input:invalid {
+  animation: justshake 0.3s forwards;
+  color: red;
+}
+
+@keyframes justshake {
+  25% {
+    transform: translateX(5px);
+  }
+
+  50% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX-(5px);
+  }
+}
+
+
+
+.parent1 {
+font-size: 0;
+}
+
+
+.child1 {
+font-size: 15px;
+}
+
+.side-icons {
+border-left: solid;
+  background-color: white;
+  padding: 28.2px 19px 18.2px 19px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.inputs-radius {
+  border-radius: 5px 0px 0px 5px;
+}
+
+.numbers-input {
+text-align: center;
+border-radius: 5px;
+}
+
+.values-box {
+margin-top: 5px;
+}
+
+.minus-icon {
+margin-right: 10px;
+background-color: transparent;
+}
+
+.plus-icon {
+margin-left: 10px;
+background-color: transparent;
+}
+
+.fa-circle-plus {
+font-size: 30px;
+}
+
+.fa-circle-minus {
+font-size: 30px;
+}
+
+.send-div {
+text-align: center;
+}
+
+.send-btn {
+padding: 12px 140px;
+margin-top: 15px;
+margin-right: 0px;
+}
+
+.send-btn:active {
+  background-color: #9BA4B5;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.which-side {
+margin-block-start: 20px;
+}
+
+/* styles.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.block {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block-1 {
+  background-image: url('img/1.jpeg');
+height: 300px;
+}
+
+.block-2 {
+  background-image: url('img/2.png');
+  height: 500px;
+}
+
+.block-3 {
+  background-image: url('img/3.png');
+  height: 400px;
+}
+
+
+.additional-text {
+  text-align: center;
+  color: black;
+  padding: 0px;
+}
+
+.rsvp {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rsvp-text {
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .block-1 {
+    height: 400px;
+  }
+
+  .block-2 {
+    height: 600px;
+  }
+
+  .block-3 {
+    height: 500px;
+  }
+}
+
+.hr {
+color: #DBDFEA;
+width: 400px;
+}
+
+.big-text {
+  font-size: 50px;
+}
+
+.task-line {
+  margin: 10px 0;
+}
+
+.task-line:nth-child(3),
+.task-line:nth-child(4) {
+  margin-top: 5px;
+}
+
+.task-line .time {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.her_von {
+font-family: 'Herr Von Muellerhoff', cursive;
+margin-bottom: 5px;
+margin-top: 0px;
+}
+
+.alef {
+font-family: 'Alef', sans-serif;
+font-size: 40px;
+}
+
+.alice {
+font-family: 'Alice', serif;
+font-size: 11px;
+letter-spacing: 3px;
+}
+
+/* font-family: 'Dancing Script', cursive; */
+.script {
+font-family: 'Kaushan Script', cursive;
+}
+
+.lato {font-family: 'Lato', sans-serif;
+}
+
+.suez {font-family: 'Suez One', serif;}
+
+
+.opening {
+margin-block-end: 0px;
+letter-spacing: 0.5px;
+}
+
+.day {
+font-size: 35px;
+margin-block-end: 0px;
+margin-block-start: 3px;
+font-family: 'Open Sans', sans-serif;
+}
+
+.heb-date {
+font-size: 30px;
+font-family: 'Open Sans', sans-serif;
+}
+
+.date {
+font-size: 15px;
+margin-bottom: 5px;
+margin-block-start: 0px;
+}
+
+.ulam {
+margin-block-end: 0px;
+}
+
+.place {
+font-size: 20px;
+margin-block-start: 0px;
+margin-block-end: 2px;
+
+}
+
+.receiving {
+padding-left: 30px;
+margin-block-start: 0px;
+margin-block-end: 0px;
+}
+
+.receiving2 {
+padding-right: 5px;
+padding-left: 25px;
+margin-top: 10px;
+}
+
+
+
+.time {
+padding-right: 30px;
+margin-block-start: 0px;
+margin-block-end: 0px;
+}
+
+.time1 {
+padding-right: 40px;
+}
+
+.time2 {
+padding-left: 6px;
+margin-top: 10px;
+}
+
+.parent-top {
+  margin-top: 15px;
+}
+
+.parent {
+  text-align: center;
+}
+.child {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.parents2 {
+font-size: 12px;
+padding-left: 110px;
+}
+.parents1 {
+font-size: 12px;
+padding-right: 100px;
+}
+
+.pick-side {
+margin-top: 15px;
+}
+
+.bride-side {
+width: 80px;
+}
+
+.bridegroom-side {
+width: 80px;
+}
+
+.send-btn {
+margin-block-start: 5px;
+}
+
