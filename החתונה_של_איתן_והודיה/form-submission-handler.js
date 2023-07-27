@@ -160,13 +160,9 @@ submitButton.addEventListener("click", async function (event) {
   // Function to extract the event name from the URL
 function extractEventNameFromURL() {
   const url = new URL(window.location.href);
-  console.log("URL:", url.href); // Log the complete URL to check if it's correct
   const path = decodeURIComponent(url.pathname);
-  console.log("Path:", path); // Log the path to check if it's correctly extracted
   const parts = path.split("/");
-  console.log("Parts:", parts); // Log the array of parts to see its content
   const eventName = parts[parts.length - 2];
-  console.log("Event Name:", eventName); // Log the extracted event name
   return eventName;
 }
   // Get the selected "Side" option
@@ -191,13 +187,12 @@ function extractEventNameFromURL() {
   // Add the selected radio button values to the submition object
   submition["Coming"] = selectedComingOption;
   submition["Side"] = selectedSideOption;
-  console.log("Form Submission Data:", submition);
+  // console.log("Form Submission Data:", submition);
   // Extract the table name from the URL
   const tableName = extractEventNameFromURL();
-  console.log(tableName);
 
   const { error } = await supabase
-    .from('החתונה_של_איתן_והודיה')
+    .from(tableName)
     .insert([submition], { returning: "minimal" });
   if (error) {
     console.log("There was an error please try again");
