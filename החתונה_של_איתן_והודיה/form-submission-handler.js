@@ -165,8 +165,7 @@ function extractEventNameFromURL() {
   console.log("Path:", path); // Log the path to check if it's correctly extracted
   const parts = path.split("/");
   console.log("Parts:", parts); // Log the array of parts to see its content
-  console.log(parts.length);
-  const eventName = parts[parts.length].trim();
+  const eventName = parts[parts.length - 2];
   console.log("Event Name:", eventName); // Log the extracted event name
   return eventName;
 }
