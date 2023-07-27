@@ -158,13 +158,17 @@ submitButton.addEventListener("click", async function (event) {
     }
   });
   // Function to extract the event name from the URL
-  function extractEventNameFromURL() {
-    const url = new URL(window.location.href);
-    const path = url.pathname;
-    const parts = path.split("/");
-    const eventName = parts[parts.length - 1];
-    return eventName;
-  }
+function extractEventNameFromURL() {
+  const url = new URL(window.location.href);
+  console.log("URL:", url.href); // Log the complete URL to check if it's correct
+  const path = url.pathname;
+  console.log("Path:", path); // Log the path to check if it's correctly extracted
+  const parts = path.split("/");
+  console.log("Parts:", parts); // Log the array of parts to see its content
+  const eventName = parts[parts.length - 1];
+  console.log("Event Name:", eventName); // Log the extracted event name
+  return eventName;
+}
   // Get the selected "Side" option
   const sideOptions = document.querySelectorAll('input[name="Side"]');
   let selectedSideOption = null; // Default value as null
@@ -191,7 +195,7 @@ submitButton.addEventListener("click", async function (event) {
   // Extract the table name from the URL
   const tableName = extractEventNameFromURL();
   console.log(tableName);
-  console.log(`string text ${tableName} string text`);
+
   const { error } = await supabase
     .from('החתונה_של_איתן_והודיה')
     .insert([submition], { returning: "minimal" });
