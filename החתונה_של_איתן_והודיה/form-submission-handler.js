@@ -161,7 +161,7 @@ submitButton.addEventListener("click", async function (event) {
 function extractEventNameFromURL() {
   const url = new URL(window.location.href);
   console.log("URL:", url.href); // Log the complete URL to check if it's correct
-  const path = url.pathname;
+  const path = decodeURIComponent(url.pathname);
   console.log("Path:", path); // Log the path to check if it's correctly extracted
   const parts = path.split("/");
   console.log("Parts:", parts); // Log the array of parts to see its content
