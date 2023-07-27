@@ -187,14 +187,14 @@ submitButton.addEventListener("click", async function (event) {
   // Add the selected radio button values to the submition object
   submition["Coming"] = selectedComingOption;
   submition["Side"] = selectedSideOption;
-  // console.log("Form Submission Data:", submition);
+  console.log("Form Submission Data:", submition);
   // Extract the table name from the URL
   const tableName = extractEventNameFromURL();
-
+  console.log(tableName);
   const { error } = await supabase
     .from(tableName)
     .insert([submition], { returning: "minimal" });
   if (error) {
-    alert("There was an error please try again");
+    console.log("There was an error please try again");
   }
 });
