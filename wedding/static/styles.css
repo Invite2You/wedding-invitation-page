@@ -59,9 +59,9 @@ textarea {
     padding: 20px;
   }
 
-  .header-image {
+/*   .header-image {
     height: 50vh;
-  }
+  } */
 }
 
 .right-align::placeholder {
