@@ -114,13 +114,23 @@ document.addEventListener("DOMContentLoaded", function () {
           body: data,
         });
 
-        Swal.fire({
-          icon: "success",
-          title: "תודה רבה",
-          text: " :) מחכים לראותכם בחתונה",
-        });
+        if (selectedButton.value == "yes") {
+          Swal.fire({
+            icon: "success",
+            title: "תודה רבה",
+            text: " :) מחכים לראותכם בחתונה",
+          });
 
-        resetForm();
+          resetForm();
+        } else {
+          Swal.fire({
+            icon: "success",
+            title: "תודה רבה",
+            text: "מצטערים שלא נראה אתכם שניפגש רק בשמחות",
+          });
+
+          resetForm();
+        }
       } catch (error) {
         Swal.fire({
           icon: "error",
