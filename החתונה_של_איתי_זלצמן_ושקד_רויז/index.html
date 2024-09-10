@@ -268,30 +268,32 @@
       src="https://kit.fontawesome.com/3ce0a43678.js"
       crossorigin="anonymous"
     >
-        // Function to get URL parameters
-  function getParameterByName(name, url = window.location.href) {
-      name = name.replace(/[\[\]]/g, '\\$&');
-      let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
-      let results = regex.exec(url);
-      if (!results) return null;
-      if (!results[2]) return '';
-      return decodeURIComponent(results[2].replace(/\+/g, ' '));
-  }
+    </script>
+    
+    <!-- JavaScript for URL parameters handling -->
+    <script>
+      // Function to get URL parameters
+      function getParameterByName(name, url = window.location.href) {
+        name = name.replace(/[\[\]]/g, "\\$&");
+        let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+        let results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return "";
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
 
-  // Populate form fields from URL parameters
-  window.onload = function() {
-      // Get the 'Name' and 'Phone Number' from the URL
-      const name = getParameterByName('Name');
-      const phone = getParameterByName('Phone%20Number'); // Spaces are encoded as '%20'
-      
-      // Set the values in the form fields
-      if (name) {
+      // Auto-populate form fields if URL parameters are available
+      window.onload = function () {
+        const name = getParameterByName("Name");
+        const phone = getParameterByName("Phone%20Number");
+
+        if (name) {
           document.querySelector('input[name="Name"]').value = name;
-      }
-      if (phone) {
+        }
+        if (phone) {
           document.querySelector('input[name="Phone Number"]').value = phone;
-      }
-  };
+        }
+      };
     </script>
   </body>
 </html>
